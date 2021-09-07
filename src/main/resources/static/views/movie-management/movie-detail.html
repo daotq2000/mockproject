@@ -1,0 +1,183 @@
+<html>
+<head>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<script src="../../resources/js/jquery.validate.js"></script>
+<script src="ajax/movie/detail.js"></script>
+<div class="card">
+    <div class="card-header card-header-primary">
+        <h4 class="card-title"></h4>
+    </div>
+    <div class="card-body">
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+            <form id="detailForm">
+                <!--                <h3 class="text-center font-weight-bold">Movie detail: Justice League</h3>-->
+                <img class="rounded mx-auto d-block" id="img" src="" />
+                <hr />
+                <input
+                        type="hidden"
+                        class="form-control"
+                        name="id"
+                        id="id"
+                />
+                <div class="form-group">
+                    <label for="nameEng" class="font-weight-bold">Movie name(ENG):</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="nameEng"
+                            name="nameEng"
+                            placeholder="Movie name(ENG)"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="nameVN" class="font-weight-bold">Movie name(VN):</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="nameVN"
+                            name="nameVN"
+                            placeholder="Movie name(VN)"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="fromDate" class="font-weight-bold">From date:</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="date"
+                            class="form-control"
+                            id="fromDate"
+                            name="fromDate"
+                            placeholder="dd/mm/yy"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="toDate" class="font-weight-bold">To date:</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="date"
+                            class="form-control"
+                            id="toDate"
+                            name="toDate"
+                            placeholder="dd/mm/yy"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="actor" class="font-weight-bold">Actor:</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="actor"
+                            name="actor"
+                            placeholder="Actor"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="movieCompany" class="font-weight-bold"
+                    >Movie Production Company:</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="movieCompany"
+                            name="movieCompany"
+                            placeholder="Movie Production Company"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="director" class="font-weight-bold">Director:</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="director"
+                            name="director"
+                            placeholder="Director"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="duration" class="font-weight-bold">Duration:</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="duration"
+                            name="duration"
+                            placeholder="Duration"
+                    />
+                </div>
+                <div class="form-group">
+                    <label for="version" class="font-weight-bold">Version:</label
+                    ><span style="color: red">*</span>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="version"
+                            name="version"
+                            placeholder="Version"
+                    />
+                </div>
+                <div class="form-group" id="typeMovies" data-name="typeMovies">
+                    <label class="font-weight-bold">Type:</label
+                    ><span style="color: red">*</span><br/>
+                    <input type="hidden" id="hiddenTypeMovies">
+                    <span id="typeMoviesspan"></span>
+                </div>
+                <div class="form-group">
+                    <label for="cinemaRoom" class="font-weight-bold">Cinema room:</label
+                    ><span style="color: red">*</span>
+                    <select class="form-control" id="cinemaRoom" name="cinemaRoom">
+                    </select>
+                    <input type="hidden" id="hiddenCinemaRoom">
+                </div>
+                <div class="form-group" id="scheduleMovies" data-name="scheduleMovies">
+                    <label class="font-weight-bold">Schedule:</label
+                    ><span style="color: red">*</span><br/>
+                    <input type="hidden" id="hiddenScheduleMovies">
+                    <span id="scheduleMoviesspan"></span>
+                </div>
+                <div class="form-group">
+                    <label for="content" class="font-weight-bold">Content :</label
+                    ><span style="color: red">*</span>
+                    <textarea
+                            class="form-control"
+                            id="content"
+                            name="content"
+                            rows="2"
+                    ></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="inp" class="font-weight-bold">Image :</label
+                    >
+                    <input class="form-control form-control-sm" id="inp" type="file" />
+                    <input type="hidden" id="image" name="image"/>
+                </div>
+                <button id="btn" type="submit" class="btn btn-info btn-sm">
+                    <i class="fa fa-check" aria-hidden="true"></i> Save
+                </button>
+                <button type="button" class="btn btn-default btn-sm" id="btnback">
+                    <i class="fa fa-times" aria-hidden="true"></i> Back
+                </button>
+            </form>
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+

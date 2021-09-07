@@ -1,0 +1,51 @@
+.title {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.main-info {
+    background: white;
+}
+
+body {
+    background: #eff0f3 !important;
+}
+
+.amy-movie-grid-2 .amy-movie-list .amy-movie-items .amy-movie-item .amy-movie-item-front, .amy-movie-layout-list .amy-movie-list .amy-movie-items .amy-movie-item .amy-movie-item-front {
+    display: inline-block;
+    width: 196px;
+    float: left;
+    position: relative;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-top: 20px;
+}.title-film{
+    color:#8cb1d2;
+}.label-text{
+    font-weight: bold;
+}.label-total{
+    color:#58be61;
+    font-weight: bold;
+}.button-primary{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    width:100px;
+    height:40px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}.button-confirm{
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    margin-bottom: 22px;
+    width:200px;
+    height:40px;
+    float:right;
+    margin-top: 20px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}

@@ -1,0 +1,8 @@
+Note một số RULE khi code:
+1. Ở mỗi RestController phải thêm RestquestMapping là "api"+"tên của Controller"
+Ví dụ:  
+       @RequestMapping(value = "/api/scheduleSeat")
+2. Trong pakages commons/utility có file CONSTAINT
+Trong đó có ghi file Message Thông báo dùng chung.
+Khi code thì dùng file đó, tránh việc hard code.
+

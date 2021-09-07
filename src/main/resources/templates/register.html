@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Register Account</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="../../resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+            href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+            rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="../../resources/css/sb-admin-2.min.css" rel="stylesheet">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=cT7KB3W3r59fxikN7DwiCVZrfKIxn0h9I-ke0J95bu36KtvyvVudYXM9IFumK0ynb7_LTsixv-TmmHDZ6TSm9H-g6YvflbGv4A2XV0iwIAW5IRV-OJw3X8zaBcxNDrtDyECMRdqaJ8xL_aj7RscOIeykMvgCucvkjOytIVEUl6Q7CGrpw9mceQsMCPOEUarOFajpxSXkaF95TPWN3RmwXAda_Mb111Jpf5Mtuets2btp-_iukBHPnJOc49DN-KuEuasFILUf14DhhD510v1NUFoCv1rN7gBVWblQHDeg9pxd_IYaAWko3O28L9WrqgTakHiutM8qIpeKMoeeavUxmF5xtu6m1ClSZ1BHmN4O2fh73XfOaBwufwXhDbnZZXex72G2Uqx8iF9DkIpZtupwuAfMuo_HR61QbjPOPmG7Q9neYN3L8O-mkvvCMvfrfs7_q6SKEKziAA_4KZfxZZJF8Q" charset="UTF-8"></script><style>
+        .bg-gradient-primary {
+            background: #eff0f3;
+        }
+    </style>
+    <!--    <script src="/resources/js/jquery3.5.1.js"></script>-->
+</head>
+<style>
+    .bg-gradient-primary{
+        background:#eff0f3;
+    }  form.user .form-control-user {
+           font-size: .8rem;
+           border-radius: 5px 5px 5px 5px !important;
+           padding: 1.5rem 1rem;
+       }
+
+    .error {
+        color: red;
+        font-size: small;
+        margin-top: 10px;
+    }
+
+    .border-error {
+        border: 1px solid red;
+    }
+</style>
+
+<body class="bg-gradient-primary">
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-6 col-lg-4 col-md-5">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">REGISTER ACCOUNT</h1>
+                                    <p id="message" style="color: #00d084" ></p>
+                                </div>
+                                <form onsubmit="return validate()" id="registration" role="form" action="/register-account" method="post" th:object="${accountDTO}">
+                                    <div class="form-group">
+                                        <input th:field="*{username}" type="text" class="form-control form-control-user"
+                                               id="userName" name="userName" placeholder="Account" >
+                                        <p class="error userNameError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input th:field="*{password}" type="password" class="form-control form-control-user"
+                                               id="password" name="password" placeholder="Password">
+                                        <p class="error passwordError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control form-control-user"
+                                               id="confirmPassword" name="confirmPassword" placeholder="Confirm password">
+                                        <p class="error confirmPasswordError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input th:field="*{fullName}" type="text" class="form-control form-control-user"
+                                               id="fullName" name="fullName" placeholder="Full Name">
+                                        <p class="error fullNameError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input th:field="*{birthDay}"  type="date" class="form-control form-control-user"
+                                               id="dateOfBirth" name="dateOfBirth" placeholder="Date of Birth">
+                                        <p class="error dateOfBirthError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input th:field="*{gender}"  type="radio" class="form-check-input" name="gender" id="male"
+                                                       value="Male" checked>
+                                                Male
+                                            </label>
+                                            <label style="padding-left: 30px;" class="form-check-label">
+                                                <input th:field="*{gender}" type="radio" class="form-check-input" name="gender" id="female"
+                                                       value="Female">
+                                                Female
+                                            </label>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="form-group">
+                                        <input th:field="*{identityCard}" type="text" class="form-control form-control-user"
+                                               id="identityCard" name="identityCard" placeholder="Identity Card">
+                                        <p class="error identityCardError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input th:field="*{email}"  type="email" class="form-control form-control-user"
+                                               id="email" name="email" placeholder="Email">
+                                        <p class="error emailError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input th:field="*{address}" type="text" class="form-control form-control-user"
+                                               id="address" name="address" placeholder="Address">
+                                        <p class="error addressError"></p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input th:field="*{phoneNumber}"  type="text" class="form-control form-control-user"
+                                               id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+                                        <p class="error phoneNumberError"></p>
+                                    </div>
+                                    <button  type="submit" class="btn btn-primary btn-user btn-block">
+                                        Register
+                                    </button>
+
+                                </form>
+                                <hr>
+
+                                <div id="loginBtn" class="text-center">
+                                    Have an account already?  <a  href="/api/account/login"  style="font-size: medium;text-decoration: underline;color: #0b75c9;cursor: pointer"> Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<!-- Bootstrap core JavaScript-->
+
+<script src="../../resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Core plugin JavaScript-->
+
+
+<!-- Custom scripts for all pages-->
+
+<script src="../../resources/js/jquery3.5.1.js"></script>
+<!--<script src="../../resources/js/jquery3.5.1.js"></script>-->
+<script src="../../ajax/login&Register/register.js"></script>
+</body>
+
+</html>

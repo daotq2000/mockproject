@@ -1,0 +1,58 @@
+<style>
+    .requiredField {
+        color: red;
+    }
+</style>
+<div class="card">
+    <div class="card-header card-header-primary">
+        <h4 class="card-title">Add Cinema Room</h4>
+        <p class="card-category">Add a new cinema room</p>
+    </div>
+    <div class="card-body">
+
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="bmd-label-floating">Name Room: <span class="requiredField">*</span></label>
+                    <input type="text"  name="roomName" id="roomName" class="form-control">
+                    <span id="nameRoomError"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="bmd-label-floating">Normal Price: <span class="requiredField">*</span></label>
+                    <input type="number"  name="normalPrice" id="normalPrice" class="form-control">
+                    <span id="normalPriceError"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="bmd-label-floating">Vip Price: <span class="requiredField">*</span></label>
+                    <input type="number"  name="vipPrice" id="vipPrice" class="form-control">
+                    <span id="vipPriceError"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="seatQuantity">Seat Quantity: <span class="requiredField">*</span></label>
+                    <select  class="form-control" name="seatQuantity" id="seatQuantity" >
+                        <option value="54">54</option>
+                        <option value="72" >72</option>
+                        <option value="90">90</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <button type="button" id="backToList" class="btn btn-default btn-sm">Back</button>
+        <button id="updateRoom" class="btn btn-fill btn-warning btn-sm">Save</button>
+
+
+    </div>
+</div>

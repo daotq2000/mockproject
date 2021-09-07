@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promotion list</title>
+    <link rel="stylesheet" href="../resources/css/all.css">
+</head>
+
+<body>
+<div class="card">
+    <div class="card-header card-header-primary">
+        <h4 class="card-title">Promotion management</h4>
+        <p class="card-category"></p>
+    </div>
+    <div class="card-body">
+        <div class="row mt-3">
+            <div class="col-3">
+
+                <button id="btnAdd" class="btn btn-info btn-sm"><i class="fa fa-plus-circle"></i> Create
+                </button>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col">
+                <div class="d-flex justify-content-start">
+                    <label for="entries" class="my-auto">Show </label>
+                    <select class="custom-select entries mx-3" style="width: auto" id="entries">
+                        <option value="4" selected>5</option>
+                        <option value="9">10</option>
+                        <option value="14">15</option>
+                        <option value="19">20</option>
+                    </select>
+                    <label for="entries" class="my-auto"> entries</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex justify-content-end">
+                    <label for="search" class="my-auto mr-2 my-auto">Search: </label>
+                    <input type="text" id="search" class="form-control my-auto" style="width: auto"
+                           placeholder="Enter title then hit [Enter]...">
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <table class="table">
+                    <thead class="text-primary">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Promotion ID</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Start Time</th>
+                        <th scope="col">End Time</th>
+                        <th scope="col">Discount Level (%)</th>
+                        <th scope="col">Detail</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                    </thead>
+
+                    <tbody class="tbody1">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+                <nav aria-label="Page navigation example" style="width: inherit; overflow: scroll">
+                    <ul class="pagination">
+                        <li class="page-item previous">
+                            <a class="page-link" href="#">Previous</a>
+                        </li>
+                        <!--                    <li class="page-item num"><a class="page-link" href="#">1</a></li>-->
+                        <!--                    <li class="page-item num"><a class="page-link" href="#">2</a></li>-->
+                        <!--                    <li class="page-item num"><a class="page-link" href="#">3</a></li>-->
+                        <li class="page-item next">
+                            <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="deleteDialog" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete promotion</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure to delete this record?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-secondary" data-dismiss="modal" id="btnDelConfirm">OK
+                </button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="btnDelCancel">Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="../../resources/js/promotion/pagination.js"></script>
+<script type="text/javascript" src="../../resources/js/promotion/list.js"></script>
+</body>
+
+</html>
